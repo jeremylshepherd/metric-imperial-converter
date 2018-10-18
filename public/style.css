@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'PT Sans', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;  
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0984e3;
+  color: white;
+  padding: 1rem;
+  width: 100vw;
+}
+
+header h1 {
+  font-size: 5vmin;
+}
+
+#toggle {
+  display: none;
+}
+
+#toggle + label::before {
+  position: absolute;
+  top: 12.5%;
+  left: -5px;
+  padding: 5px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: '\f05a';
+  font-size: 32px;
+  transition: left 425ms;
+  z-index: 100;
+  box-shadow: 3px 0 4px rgba(0, 0, 0, 0.7);
+  width: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #D4EDDA;
+}
+
+#toggle:checked + label::before {
+  left:75vw;
+}
+
+#userstories {
+  position: absolute;
+  top: 10%;
+  left: -81%;
+  width: 75vw;
+  z-index: 25;
+  background-color: #D4EDDA;
+  transition: left 425ms;
+  box-shadow: 2px 2px 6px black;
+  padding: 50px;
+  line-height: 25px
+}
+
+#toggle:checked ~ #userstories {
+  left: 0;
+}
+
+#body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 60vh;  
+}
+
+#body h2,
+#body p {
+  padding: 15px
+}
+
+form {
+  display:flex;
+}
+
+#convertField {
+  padding: 8px;
+}
+
+#convert {
+  background-color: #0984e3;
+  padding: 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: none;
+  color: white;
+}
+
+#jsonResult {
+  line-height: 28px;
+}
+
+  
