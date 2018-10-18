@@ -37,7 +37,7 @@ suite('Unit Tests', () => {
     
     test('Fractional Input w/ Decimal', done => {
       let input = "10.2/2kg";
-      assert.approximately(convertHandler.getNum(input), 5.1, 0.1, 'Should return a fraction with a decimal');
+      assert.equal(convertHandler.getNum(input), 5.1, 'Should return a fraction with a decimal');
       done();
     });
     
