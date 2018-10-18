@@ -36,7 +36,7 @@ header h1 {
   position: absolute;
   top: 12.5%;
   left: -5px;
-  padding: 5px;
+  padding: 8px;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: '\f05a';
@@ -45,6 +45,7 @@ header h1 {
   z-index: 100;
   box-shadow: 3px 0 4px rgba(0, 0, 0, 0.7);
   width: 5vw;
+  max-width: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
