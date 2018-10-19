@@ -6,9 +6,11 @@
 *       
 */
 
+'use strict';
+
 function ConvertHandler() {
   
-  this.getNum = function(input) {
+  this.getNum = (input) => {
     if(/\/.*\//g.test(input)) return false;
     if(!/[0-9]{1,99}\s?[.]?\/?[0-9]?[A-Za-z]/g.test(input)) return 1;
     input = input.replace(/\s/g, '');
@@ -22,7 +24,7 @@ function ConvertHandler() {
     return +num;
   };
   
-  this.getUnit = function(input) {    
+  this.getUnit = (input) => {    
     if(!/[0-9]?\s?[.]?\/?[A-Za-z]{1,3}/g.test(input)) return false;
     input = input.replace(/\s/g, '');
     let re = /[A-Za-z]/gi.exec(input);
@@ -93,7 +95,7 @@ function ConvertHandler() {
     }
   };
   
-  this.getString = function(initNum, initUnit, returnNum, returnUnit) {
+  this.getString = (initNum, initUnit, returnNum, returnUnit) => {
     return `${initNum} ${this.spellOutUnit(initUnit)} converts to ${returnNum} ${this.spellOutUnit(returnUnit)}`;
   };
   
